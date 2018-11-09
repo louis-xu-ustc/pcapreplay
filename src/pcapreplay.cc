@@ -51,9 +51,8 @@ int main(int argc, char *argv[])
                 return -1;
         }
     }
-    
 
-    pcap = pcap_open_offline(argv[1],errbuf);
+    pcap = pcap_open_offline(argv[optind],errbuf);
     if(pcap == NULL)
     {
         fprintf(stderr,"error reading pcap file: %s\n",errbuf);
